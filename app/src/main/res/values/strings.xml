@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Роллы на заказ</string>
+    <string name="welcome">Добро пожаловать!</string>
+    <string name="welcome_name">С возвращением, имя!</string>
+    <string name="name_hint">Введите имя</string>
+    <string name="password_hint">Введите пароль</string>
+    <string name="enter">Вход</string>
+    <string name="registration">Регистрация</string>
+    <string name="back">Назад</string>
+    <string name="cart">Корзина</string>
+    <string name="rolls">Роллы</string>
+    <string name="add_rolls">Добавить роллы</string>
+    <string name="add">Добавить</string>
+    <string name="quanity">Количество</string>
+    <string name="name">Название</string>
+    <string name="filadelphia">Филадельфия</string>
+    <string name="counts">штук</string>
+    <string name="wishes">Пожелания</string>
+    <string name="more_sauce">побольше соуса</string>
+    <string name="delete">Удалить</string>
+</resources>
