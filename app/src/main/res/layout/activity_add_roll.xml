@@ -29,15 +29,12 @@
                 android:textSize="12sp"
                 android:textColor="@color/cream" />
 
-            <EditText
-                android:id="@+id/name_input"
+            <Spinner
+                android:id="@+id/rolls_spinner"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
-                android:hint="@string/filadelphia"
-                android:textColor="@color/white"
-                android:textSize="14sp"
-                android:textColorHint="@color/cream" />
+                android:backgroundTint="@color/salmon" />
 
             <TextView
                 android:layout_width="wrap_content"

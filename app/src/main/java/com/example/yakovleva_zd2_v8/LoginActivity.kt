@@ -10,7 +10,9 @@ import android.widget.Button
 import android.widget.EditText
 import android.content.Context
 import android.content.Intent
-import android.widget.Toast
+import android.view.View
+import androidx.core.content.ContextCompat
+import com.google.android.material.snackbar.Snackbar
 import com.google.gson.Gson
 
 class LoginActivity : AppCompatActivity() {
@@ -44,9 +46,9 @@ class LoginActivity : AppCompatActivity() {
             val username = name.text.toString()
             val pass = password.text.toString()
             if (username.isEmpty() || pass.isEmpty())
-                Toast.makeText(this, "Все поля должны быть заполнены", Toast.LENGTH_SHORT).show()
+                showSnackBar(findViewById(android.R.id.content), "Все поля должны быть заполнены")
             else if (password.text.length < 8)
-                Toast.makeText(this, "Поле пароль должно содержать не менее 8 символов", Toast.LENGTH_SHORT).show()
+                showSnackBar(findViewById(android.R.id.content), "Пароль должен содержать не менее 8 символов")
             else {
                 val userJson = """{
                 "name": "$username",
@@ -75,5 +77,13 @@ class LoginActivity : AppCompatActivity() {
             name.setText(savedUser.name)
             password.setText(savedUser.password)
         }
+    }
+    //показ снекбара
+    private fun showSnackBar(view: View, message: String) {
+        val snackbar = Snackbar.make(view, message, Snackbar.LENGTH_LONG)
+        val snackbarView = snackbar.view
+        snackbarView.setBackgroundColor(ContextCompat.getColor(this, R.color.cream))
+        snackbar.setTextColor(ContextCompat.getColor(this, R.color.green))
+        snackbar.show()
     }
 }
